@@ -1,0 +1,13 @@
+<div class="folder-container">
+    <ul class="file-list">
+      <li *ngFor="let folder of folders">
+        <span>📁{{ folder.name }}</span>
+        <button class="menu-toggle" (click)="toggleMenu(folder)">⋮</button>
+        <div class="menu" *ngIf="folder.showMenu">
+          <button (click)="modifyFolder(folder)">Modifier</button>
+          <button (click)="deleteFolder(folder)">Supprimer</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+  
